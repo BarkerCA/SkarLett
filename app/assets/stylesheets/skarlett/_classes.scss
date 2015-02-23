@@ -1,0 +1,113 @@
+.item:hover{
+  color: $white;  
+}
+
+.headings{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.rotate_left{
+  @include rotate_element(-3.5deg);
+}
+
+.rotate_right{
+  @include rotate_element(3.5deg);
+}
+
+.green_rows{
+  background-color: rgba($rf-green, 0.85);
+  color: $white;
+  padding: 50px 0px 50px 0px;
+  
+  h1,h2,h3,h4,h5,h6{
+    @extend .headings;
+    color: $white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    border-bottom: 1px solid $white;
+  }
+  h4{
+    border-bottom: none;
+  }
+  
+  a, a:hover, a:active{
+    color: white;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  .button:hover{
+    background-color: white;
+    color: $rf-green;
+    border: 1px solid $rf-green;
+    text-decoration: none;
+  }
+  img{
+    @include rotate_element(3.5deg);
+  }
+  
+}
+
+.white_rows{
+  background-color: rgba($white, 0.85);
+  color: $rf-green;
+  padding: 50px 0px 50px 0px;
+  
+  h1,h2,h3,h4,h5,h6{
+    @extend .headings;
+    color: $rf-green;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    border-bottom: 1px solid $rf-green;
+  }
+  
+  a, a:hover, a:active{
+    color: $rf-green;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .button{
+    background-color: transparent;
+    color: $rf-green;
+    border: 1px solid $rf-green;
+  }
+  .button:hover{
+    background-color: $rf-green;
+    color: $white;
+    border: 1px solid $white;
+    text-decoration: none;
+  }
+  img{
+    @include rotate_element(-3.5deg);
+  }
+  
+}
+
+.full-background{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.rf-green{
+  color: $rf-green;
+}
+
+.rf-gray{
+  color: $rf-gray;
+}
+
+.home_images{
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+  border: 7px solid $white;
+}

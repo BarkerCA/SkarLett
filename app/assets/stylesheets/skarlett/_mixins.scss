@@ -1,0 +1,7 @@
+@mixin rotate_element($amount){
+  /* IE 9 */
+  -ms-transform: rotate($amount);
+  /* Chrome, Safari, Opera */
+  -webkit-transform: rotate($amount);
+  transform: rotate($amount);
+}
