@@ -1,5 +1,8 @@
 $(document).ready(function(){
-  var body = $('body').height();
-  var bodyminus = body - 81;
-  $('.main-section').css({'min-height' : bodyminus});
+  //Logo Clicks
+  $("#logo").click(function(){
+    window.location = "/";
+  });
+  //Background Image
+  $.backstretch('https://d1nvel87k8rw67.cloudfront.net/www/img/fullstage2_bw.jpg');
 });

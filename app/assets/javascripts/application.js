@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require backstretch
 // require turbolinks
 // require fastclick
 //= require foundation
