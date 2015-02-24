@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   # Establish the root url of the site
   root 'home#index'
   
-  
+  # Main Application URLS
+  get 'contact'     => 'contact#index'
+  get 'responses'   => 'responses#index'
+  get 'about'       => 'about#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

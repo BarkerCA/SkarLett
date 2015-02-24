@@ -85,4 +85,4 @@ production:
   #
   # Heroku
   #
-  url: <%= ENV['HEROKU_POSTGRESQL_GOLD_URL'] %>
+  url: <%= ENV['HEROKU_POSTGRESQL_MAROON_URL'] %>

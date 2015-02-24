@@ -15,5 +15,5 @@
 // require turbolinks
 // require fastclick
 //= require foundation
-//= require scroll
-//= require reftagger.js
+//= require skarlett
+//= require reftagger

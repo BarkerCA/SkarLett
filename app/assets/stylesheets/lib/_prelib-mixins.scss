@@ -24,3 +24,18 @@
   background: -moz-linear-gradient($top, $bottom); /* For Firefox 3.6 to 15 */
   background: linear-gradient($top, $bottom); /* Standard syntax */
 }
+
+@mixin rotate_element($amount){
+  /* IE 9 */
+  -ms-transform: rotate($amount);
+  /* Chrome, Safari, Opera */
+  -webkit-transform: rotate($amount);
+  transform: rotate($amount);
+}
+
+@mixin full_background{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}

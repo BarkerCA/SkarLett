@@ -1,6 +1,5 @@
-<%= render 'layouts/parts/home/head' %>
+<%= render "layouts/parts/home/head" %>
 
-<div id="main">
   <div class="row">
     <div style="color: red; text-align: center;" id="notice" class="small-12 columns">
       <% flash.each do |name, msg| %>
@@ -11,6 +10,5 @@
 
   <%= yield %>
 
-</div>
 
-<%= render 'layouts/parts/home/foot' %>
+<%= render "layouts/parts/home/foot" %>

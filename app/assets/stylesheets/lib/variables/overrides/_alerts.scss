@@ -1,5 +1,5 @@
 // Primary Color
-$primary-color: #3AB54A;
+$primary-color: $primary-color;
 $primary-background: rgba($primary-color, 0.5);
 $primary-dark: darken($primary-color, 10%);
 $primary-darker: darken($primary-color, 20%);
