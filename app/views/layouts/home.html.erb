@@ -1,14 +1,11 @@
-<%= render "layouts/parts/home/head" %>
-
-  <div class="row">
-    <div style="color: red; text-align: center;" id="notice" class="small-12 columns">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-    </div>
-  </div>
-
-  <%= yield %>
-
-
-<%= render "layouts/parts/home/foot" %>
+<%= render "layouts/parts/app/head" %>
+<%= render "layouts/parts/app/offcanvas_open" %>
+<%= render "layouts/parts/home/leftside_nav" %>
+<% if @rightside_nav %>
+<%= render "layouts/parts/app/rightside_nav" %>
+<% end %>
+<%= render "layouts/parts/app/content" %>
+<%= render "layouts/parts/app/offcanvas_close" %>
+<%= render "layouts/parts/app/footerappscripts" %>
+<%= render "layouts/parts/home/footerscripts" %>
+<%= render "layouts/parts/app/foot" %>

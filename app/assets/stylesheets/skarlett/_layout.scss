@@ -1,31 +1,95 @@
 // Small screens
 /* Define mobile styles */
-@media only screen {
-  body{
 
-  }
-}
-/* max-width 640px, mobile-only styles, use when QAing mobile issues */ 
-@media only screen and (max-width: 40em){} 
-// Medium screens 
-/* min-width 641px, medium screens */ 
-@media only screen and (min-width: 40.063em){}
-/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */ 
-@media only screen and (min-width: 40.063em) and (max-width: 64em){}
-// Large screens
-/* min-width 1025px, large screens */ 
-@media only screen and (min-width: 64.063em){
-  body{
+// Logo Font Size
+$logo-rem: 45;
+$available-rem: 17;
+
+@media only screen {
+  // Application Wide
+  body{    
+    // This is Skar and Lett
     #logo:hover{
       cursor: pointer;
     }
     #logo{
-      margin-left: 15px;
+      text-align: center;
       margin-top: 5px;
       font-family: alex-brush, cursive;
-      font-size: 5em;
+      font-size: rem-calc($logo-rem);
       color: #c61315;
       @include emboss;
+      
+      // This is the heart
+      span{
+        font-size: .5em;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+    .main-section{
+      background-color: rgba(255,255,255,1.0);
+    }
+  }
+  // Frontpage Only
+  body.home{
+    
+    #expander{
+      background-image: url('https://d1nvel87k8rw67.cloudfront.net/www/img/fullstage2_bw_blur.jpg');      
+      
+      #expander_inner{
+        
+        img{
+          box-shadow: 0px 0px 17px rgba(0,0,0,0.7);
+          border: 5px solid black;
+          margin-top: 20px;
+        }
+        
+        #available_at{
+          font-size: rem-calc($available-rem);
+          color: $white;
+          text-align: center;
+          @include text-shadow(0px 0px 17px rgba(0,0,0, 1.0),0px 0px 17px rgba(0,0,0, 1.0));
+        }
+        
+        .button{
+          background-color: transparent;
+          border: 2px solid $white;
+          color: $white;
+          font-weight: bold;
+          a{
+            color: $white;
+          }
+        }
+        .button:hover{
+          background-color: $white;
+          border: 2px solid $primary-color;
+          color: $primary-color;
+          font-weight: bold;
+          a{
+            color: $primary-color;
+          }
+        } 
+      }
+    }    
+    .main-section{
+      background-color: rgba(255,255,255,.75);
+    }
+  }  
+}
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */ 
+@media only screen and (max-width: 40em){} 
+// Medium screens 
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  // Application Wide
+  body{
+    
+    // This is Skar and Lett
+    #logo{
+      margin-top: 5px;
+      font-size: rem-calc($logo-rem + 25);
       
       // This is the heart
       span{
@@ -34,13 +98,63 @@
         margin-right: 10px;
       }
     }
-    .main-section{
-      background-color: rgba(255,255,255,1.0);
+  }
+  // Frontpage Only
+  body.home{
+    
+    #expander{
+      
+      #expander_inner{
+        
+        img{
+          margin-top: 50px;
+        }
+        #available_at{
+          font-size: rem-calc($available-rem + 10);
+          margin-top: 25px;
+          margin-bottom: 45px;
+        }
+      }
     }
   }
+}
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */ 
+@media only screen and (min-width: 40.063em) and (max-width: 64em){}
+// Large screens
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  // Application Wide
+  body{
+    
+    // This is Skar and Lett
+    #logo{
+      margin-top: 5px;
+      font-size: rem-calc($logo-rem + 50);
+      
+      // This is the heart
+      span{
+        font-size: .5em;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+  // Frontpage Only
   body.home{
-    .main-section{
-      background-color: rgba(255,255,255,.75);
+    
+    #expander{
+      
+      #expander_inner{
+        
+        img{
+          margin-top: 100px;
+        }
+        #available_at{
+          font-size: rem-calc($available-rem + 20);
+          margin-top: 25px;
+          margin-bottom: 45px;
+        }
+      }
     }
   }
 }

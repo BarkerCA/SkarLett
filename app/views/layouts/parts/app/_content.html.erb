@@ -1,0 +1,19 @@
+      <!-- Begin Main Display Section Of The Site -->
+      <section class="main-section">
+        
+        <!-- Begin Flash Message Container -->
+        <div class="row">
+          <div style="color: red; text-align: center;" id="notice" class="small-12 columns">
+            <% flash.each do |name, msg| %>
+              <%= content_tag :div, msg, :id => "flash_#{name}" %>
+            <% end %>
+          </div>
+        </div>
+        <!-- End Flash Message Container -->
+        
+        <!-- Begin Content Output -->
+        <%= yield %>
+        <!-- End Content Output -->
+        
+      </section>
+      <!-- End Main Display Section Of The Site -->

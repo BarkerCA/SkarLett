@@ -61,19 +61,32 @@
       <div class="inner-wrap">
         <nav class="tab-bar">
           
-          <section class="left">
-            <h1 id="logo">Skar<span>&#x2764;</span>Lett</h1>
+          <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
           </section>
     
           <section class="middle tab-bar-section">
-            
+            <h1 id="logo">Skar<span>&#x2764;</span>Lett</h1>
           </section>
-    
+          
           <section class="right-small">
             <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
           </section>
+
         </nav>
-        
+      
+      <!-- Begin Leftside Navigation -->
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Site Navigation</label></li>
+          <li><a href="/responses">Responses</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </aside>
+      <!-- End Leftside Navigation -->
+      
+      <!-- Begin Rightside Navigation -->
       <aside class="right-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Site Navigation</label></li>
@@ -82,21 +95,64 @@
           <li><a href="/contact">Contact</a></li>
         </ul>
       </aside>
+      <!-- End Rightside Navigation -->
       
+      <!-- Begin Expander Frontpage Display -->
       <div style="display:none;" id="expander">
         <div style="display:none;" id="expander_inner" class="row">
           <div class="small-12 columns text-center" style="margin-bottom: 20px;">
-            <img style="box-shadow: 0px 0px 17px rgba(0,0,0,0.5); border: 5px solid black; margin-top: 100px;" src="https://d1nvel87k8rw67.cloudfront.net/www/img/847726029997large-300x300.jpg" />
+            <img src="https://d1nvel87k8rw67.cloudfront.net/www/img/847726029997large-300x300.jpg" />
           </div>
-  
-          <div class="small-12 columns text-center">
-            <p style="color: white; font-weight: bold;">Available At These Locations</p>
-            <a target="_blank" class="button" href="https://itunes.apple.com/us/album/i-am-yours/id931652382">iTunes</a> 
-            <a target="_blank" class="button" href="https://play.google.com/store/music/album/SkarLett_I_Am_Yours?id=Bew4ppnp7y3bxkd7eucrwlgp4ym">Google Play</a> 
-            <a href="https://tatemusicgroup.com/store/album/847726029997" target="_blank" class="button">Tate</a>
+          <div class="row">
+            <p id="available_at" class="small-12 large-12 columns">Available At These Locations</p>
+            <p class="small-12 medium-3 large-3 columns button">
+              <a target="_blank" href="https://play.google.com/store/music/album/SkarLett_I_Am_Yours?id=Bew4ppnp7y3bxkd7eucrwlgp4ym">Google Play</a>
+            </p>
+            <p class="small-12 medium-4 medium-offset-1 large-4 large-offset-1 columns button">
+              <a target="_blank" href="https://tatemusicgroup.com/store/album/847726029997">Tate Music Group</a>
+            </p>
+            <p class="small-12 medium-3 medium-offset-1 large-3 large-offset-1 columns button">
+              <a target="_blank" href="https://itunes.apple.com/us/album/i-am-yours/id931652382">Apple iTunes</a>
+            </p>
           </div>
         </div>
       </div>
+      <!-- End Expander Frontpage Display -->
+      
+      <!-- Begin Main Display Section Of The Site -->
       <section class="main-section">
+        
+        <!-- Begin Flash Message Container -->
         <div class="row">
-          <div class="small-12 columns">
+          <div style="color: red; text-align: center;" id="notice" class="small-12 columns">
+            <% flash.each do |name, msg| %>
+              <%= content_tag :div, msg, :id => "flash_#{name}" %>
+            <% end %>
+          </div>
+        </div>
+        <!-- End Flash Message Container -->
+        
+        <!-- Begin Content Output -->
+        <%= yield %>
+        <!-- End Content Output -->
+        
+      </section>
+      <!-- End Main Display Section Of The Site -->
+      <a class="exit-off-canvas"></a>
+      </div>
+      <!-- End Inner Wrap -->
+    </div>
+    <!-- End Off Canvas Wrap -->
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script type="text/javascript">
+      var body = $('body').height();
+      var bodyminus = body - 91;
+        //Background Image
+      $('#expander').backstretch('https://d1nvel87k8rw67.cloudfront.net/www/img/fullstage2_bw_blur.jpg').css({'min-height' : bodyminus}).show(1, function(){
+        $('#expander_inner').fadeIn(1000);
+      });
+      $(document).foundation();
+    </script>
+  </body>
+</html>
