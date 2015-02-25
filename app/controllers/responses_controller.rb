@@ -1,5 +1,5 @@
 class ResponsesController < ApplicationController
   def index
-    @page = {:title => 'Responses To SkarLett', :head_title => 'Responses'}
+    @page = {:title => 'SkarLett Buzz', :head_title => 'Responses'}
   end
 end

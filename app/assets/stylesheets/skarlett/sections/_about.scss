@@ -1,0 +1,152 @@
+//
+// Font Calculations
+//
+$potential-rem: 15;
+
+//
+// Small screens
+//
+/* Define mobile styles */
+@media only screen {
+  body.about{    
+    .main-section{
+      h2{
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+      }
+      // Page Images
+      img{
+        @include photo_style;
+        margin: 19px;       
+      }
+      img:hover{
+        @include photo_style_hover($shadow-color: $sk-red);
+      }
+      #about_img_1{
+        margin: 0px 0px 10px 0px;
+      }
+      #about_img_2{
+        margin: 0px 0px 10px 0px;
+      }
+      #about_img_3{
+        display: none;
+      }
+      // Page Paragraphs
+      p{
+        text-align: justify;
+      }
+      #about_p_1{
+
+      }
+      #about_p_2{
+
+      }
+      #about_p_3{
+        
+      }
+      // Standout Areas
+      #full_potential{
+        border-top: 1px solid $grayTimberwolf;
+        border-bottom: 1px solid $grayTimberwolf;
+        margin: 25px 0px 45px 0px;
+        padding: 10px 0px 10px 0px;
+        text-align: center; 
+        color: $sk-red_dark; 
+        font-style: italic;
+        font-size: rem-calc($potential-rem);
+      }
+      
+      #skarlett_meaning{
+        border-top: 1px solid $grayTimberwolf;
+        border-bottom: 1px solid $grayTimberwolf;
+        margin: 45px 0px 45px 0px;
+        padding: 10px 0px 10px 0px;
+        text-align: center; 
+        color: $sk-red_dark; 
+        font-style: italic;
+        font-size: rem-calc($potential-rem);
+      }
+      
+      // Electronic Press Kit
+      #epk{
+        border-top: 1px solid $grayTimberwolf;
+        margin-top: 45px;
+        padding-top: 35px;      
+      }
+    }
+  }
+}
+//
+// Medium screens 
+//
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  body.about{    
+    .main-section{
+      // Page Images
+      #about_img_1{
+        margin-left: 0px;
+        margin-top: 0px;
+      }
+      #about_img_2{
+        margin-top: 0px;
+        margin-right: 0px;
+      }
+      #about_img_3{
+        display: block;
+        margin-top: 0px;
+        margin-left: 0px;
+      }
+      // Page Paragraphs
+      p{
+        text-align: justify;
+      }
+      #about_p_1{
+
+      }
+      #about_p_2{
+
+      }
+      #about_p_3{
+        
+      }
+      // Standout Areas
+      #full_potential{
+        margin: 25px 0px 35px 0px;
+        padding: 10px 0px 10px 0px;
+        font-size: rem-calc($potential-rem + 10);
+      }
+      
+      #skarlett_meaning{
+        margin: 35px 0px 35px 0px;
+        padding: 10px 0px 10px 0px;
+        font-size: rem-calc($potential-rem + 10);
+      }
+    }
+  }
+}
+//
+// Large screens
+//
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  body.about{    
+    .main-section{
+      // Standout Areas
+      #full_potential{
+        font-size: rem-calc($potential-rem + 17);
+      }
+      
+      #skarlett_meaning{
+        font-size: rem-calc($potential-rem + 17);
+       }
+      
+      // Electronic Press Kit
+      #epk{
+        border-top: 1px solid $grayTimberwolf;
+        margin-top: 45px;
+        padding-top: 35px;
+      }
+    }
+  }
+}

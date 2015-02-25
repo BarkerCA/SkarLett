@@ -8,6 +8,22 @@ Rails.application.routes.draw do
   get 'responses'   => 'responses#index'
   get 'about'       => 'about#index'
   
+  # Application Namespaces
+  #resources :users
+  #resources :messages
+
+  namespace :admin do
+
+    #get "home"    => "home#index",        :as => "root"
+    #get "logout"  => "sessions#destroy",  :as => "log_out"
+    #get "login"   => "sessions#new",      :as => "log_in"
+    #get "signup"  => "users#new",         :as => "sign_up"
+
+    #resources :users
+    #resources :sessions
+    #resources :messages
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,5 +1,5 @@
 class AboutController < ApplicationController
   def index
-    @page = {:title => 'About SkarLett', :head_title => 'About Us'}
+    @page = {:title => 'Who Is SkarLett?', :head_title => 'About Us'}
   end
 end

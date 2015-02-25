@@ -1,0 +1,38 @@
+//
+// Font Calculations
+//
+
+
+//
+// Small screens
+//
+/* Define mobile styles */
+@media only screen {
+  body.messages{    
+    .main-section{
+      
+    }
+  }
+}
+//
+// Medium screens 
+//
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  body.messages{    
+    .main-section{
+      
+    }
+  }
+}
+//
+// Large screens
+//
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  body.messages{    
+    .main-section{
+      
+    }
+  }
+}
