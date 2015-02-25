@@ -10,8 +10,9 @@
 
 // Foundation
 @import "lib/variables/foundation/foundation_libvars";
-@import "foundation/foundation-icons/foundation-icons.css";
-@import "foundation/webicons-master/webicons.scss";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css');
+//@import "foundation/foundation-icons/foundation-icons.css";
+//@import "foundation/webicons-master/webicons.scss";
 
 // Mixins, Functions
 @import "lib/postlib-functions";
