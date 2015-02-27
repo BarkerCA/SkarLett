@@ -30,8 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 group :production do
- gem 'rails_12factor'
- gem 'unicorn'
+ # gem 'rails_12factor'
+ # gem 'unicorn'
 end
 
 # Use Capistrano for deployment

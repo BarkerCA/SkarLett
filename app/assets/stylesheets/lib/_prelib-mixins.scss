@@ -39,3 +39,29 @@
   background-position: center center;
   background-attachment: fixed;
 }
+
+//
+// Creates a border and outline around a photo, similar to .th in Foundation
+// Variables:
+//   $border-width: 5 pixels
+//   $border-color: white
+//   $shadow-color: black
+//   $shadow-alpha: 75 percent
+//
+@mixin photo_style($border-width: 5px, $border-color: #FFF, $shadow-color: #000, $shadow-alpha: 0.75){
+  border: $border-width solid $border-color;
+  $shadow: 0px 0px 1px rgba($shadow-color,$shadow-alpha);
+  @include box-shadow($shadow);
+}
+//
+// Creates an outer glow hover effect, similar to .th in Foundation
+// Variables:
+//   $shadow-blur: 7 pixels
+//   $shadow-color: #0066FF (Blue)
+//   $shadow-alpha: 75 percent
+//
+@mixin photo_style_hover($shadow-blur: 7px, $shadow-color: #0066FF, $shadow-alpha: 0.75){
+  $shadow: 0px 0px 7px rgba($shadow-color,$shadow-alpha);
+  @include box-shadow($shadow);
+  transition: box-shadow 500ms ease-out;
+}
