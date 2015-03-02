@@ -9,8 +9,8 @@ class ContactController < ApplicationController
       @message = Message.new(message_params)
       respond_to do |format|
         if @message.save
-          #MessageMailer.contact_email(@message).deliver_now
-          #MessageMailer.thankyou_email(@message).deliver_now
+          MessageMailer.contact_email(@message).deliver_now
+          MessageMailer.thankyou_email(@message).deliver_now
           format.html { redirect_to '/contact/finished/' + is_human?.to_s }
           format.json { render :show, status: :created, location: @message }
         else
