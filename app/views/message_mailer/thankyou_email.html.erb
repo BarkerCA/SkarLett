@@ -5,7 +5,7 @@
 </div>
 
 <div>
-  <p>Name: <%= @user.name.capitalize %></p>
+  <p>Name: <span class="sk-red_dark"><%= @user.name.titleize %></span></p>
 </div>
 
 <div>
@@ -13,12 +13,12 @@
 </div>
 
 <div>
-  <p>Subject: <%= @user.subject %></p>
+  <p>Subject: <span class="sk-red_dark"><%= @user.subject.titleize %></span></p>
 </div>
 
 <hr />
 
 <div>
-  <p class="sk-red_dark" style="font-weight: bold;"><%= @user.name.capitalize %> says this:</p>
+  <p><span class="sk-red_dark" style="font-weight: bold;"><%= @user.name.titleize %></span> says this:</p>
   <%=raw @user.memo %>
 </div>
