@@ -33,6 +33,30 @@ $toph1-rem: 40;
     }
     .main-section{
       background-color: rgba(255,255,255,1.0);
+      
+      #flash_message{
+        
+        background-color: $sk-red;
+        color: $white;
+        #notice{
+          color: $white;
+          text-align: center;
+        }
+      }
+      
+      .error_messages{
+        h2{
+          margin: 0px 0px 0px 0px;
+          padding: 0px 0px 0px 0px;
+        }
+        li{
+          color: $sk-red_dark;
+        }
+      }
+      
+      textarea{
+        min-height: 200px;
+      }
       h1.top_h1{
         margin: 0px 0px 25px 0px;
         background-color: $sk-red_dark;

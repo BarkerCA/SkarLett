@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/skar-lett.com/shared/foundation/foundation-5.5.1/css/normalize.css">
+    <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/skar-lett.com/shared/foundation/foundation-5.5.1/css/foundation.min.css">
+    <style>
+      .rf-gray{
+        color: #595758;
+      }
+      .sk-red_dark{
+        color: #c61315;
+      }
+      body{
+        background-color: #595758;
+        color: #FFFFFF;
+      }
+      a, a:hover, a:active, a:visited{
+        color: #c61315;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+      h1,h2,h3,h4,h5,h6{
+        color: #FFFFFF;
+      }
+      
+      .row{
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="small-12 columns">
+        <img src="https://s3-us-west-1.amazonaws.com/skar-lett.com/shared/img/SkarLett_Cropped_XSmall.png" />
+      </div>
+      <div class="small-12 columns">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

@@ -2,11 +2,13 @@
       <section class="main-section">
         
         <!-- Begin Flash Message Container -->
-        <div class="row">
-          <div style="color: red; text-align: center;" id="notice" class="small-12 columns">
-            <% flash.each do |name, msg| %>
-              <%= content_tag :div, msg, :id => "flash_#{name}" %>
-            <% end %>
+        <div id="flash_message">
+          <div class="row">
+            <div id="notice" class="small-12 columns">
+              <% flash.each do |name, msg| %>
+                <%= content_tag :div, msg, :id => "flash_#{name}" %>
+              <% end %>
+            </div>
           </div>
         </div>
         <!-- End Flash Message Container -->

@@ -1,0 +1,24 @@
+<h1 class="text-center" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;">Thank You For Contacting SkarLett</h1>
+
+<div>
+  <p>You sent us the following information:</p>
+</div>
+
+<div>
+  <p>Name: <%= @user.name.capitalize %></p>
+</div>
+
+<div>
+  <p>Email Address: <a href="mailto:<%= @user.email %>"><%= @user.email %></a></p>
+</div>
+
+<div>
+  <p>Subject: <%= @user.subject %></p>
+</div>
+
+<hr />
+
+<div>
+  <p class="sk-red_dark" style="font-weight: bold;"><%= @user.name.capitalize %> says this:</p>
+  <%=raw @user.memo %>
+</div>

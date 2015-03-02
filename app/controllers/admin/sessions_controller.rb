@@ -7,15 +7,20 @@ class Admin::SessionsController < ApplicationController
   def create
     @page = {:title => 'Administration Login', :head_title => 'Administration Login'}
     user = User.authenticate(params[:email], params[:password])
-    if user && user.enabled == true
-      session[:user_id] = user.id
-      redirect_to admin_path, :notice => "You have successfully logged in."
-    elsif user.enabled == false
-      flash.now.alert = "Your account is disabled"
-      render "new"
-    else
+    if user == nil
       flash.now.alert = "Invalid email or password"
       render "new"
+    else
+      if user.enabled == true
+        session[:user_id] = user.id
+        redirect_to admin_path, :notice => "You have successfully logged in."
+      elsif user.enabled == false
+        flash.now.alert = "Your account is disabled"
+        render "new"
+      else
+        flash.now.alert = "Invalid email or password"
+        render "new"
+      end
     end
   end
   
