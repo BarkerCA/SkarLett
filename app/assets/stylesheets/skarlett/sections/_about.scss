@@ -45,6 +45,17 @@ $potential-rem: 15;
         
       }
       // Standout Areas
+      #band_names{
+        border-top: 1px solid $grayTimberwolf;
+        border-bottom: 1px solid $grayTimberwolf;
+        margin: 25px 0px 45px 0px;
+        padding: 10px 0px 10px 0px;
+        text-align: center; 
+        color: $sk-red_dark; 
+        font-style: italic;
+        font-size: rem-calc($potential-rem);
+      }
+      
       #full_potential{
         border-top: 1px solid $grayTimberwolf;
         border-bottom: 1px solid $grayTimberwolf;
@@ -111,6 +122,12 @@ $potential-rem: 15;
         
       }
       // Standout Areas
+      #band_names{
+        margin: 25px 0px 35px 0px;
+        padding: 10px 0px 10px 0px;
+        font-size: rem-calc($potential-rem + 10);
+      }
+      
       #full_potential{
         margin: 25px 0px 35px 0px;
         padding: 10px 0px 10px 0px;
@@ -133,6 +150,10 @@ $potential-rem: 15;
   body.about{    
     .main-section{
       // Standout Areas
+      #band_names{
+        font-size: rem-calc($potential-rem + 17);
+      }
+      
       #full_potential{
         font-size: rem-calc($potential-rem + 17);
       }
