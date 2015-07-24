@@ -1,0 +1,65 @@
+//
+// Font Calculations
+//
+$potential-rem: 15;
+
+//
+// Small screens
+//
+/* Define mobile styles */
+@media only screen {
+  body.event{    
+    .main-section{
+      
+    }
+  }
+}
+//
+// Medium screens 
+//
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  body.event{    
+    .main-section{
+      
+    }
+  }
+}
+//
+// Large screens
+//
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  body.event{    
+    .main-section{
+      .event_date p{
+        text-align: center;
+        border: 5px solid $sk-red;
+        padding: 20px 0px 20px 0px;
+        background-color: $sk-teal_dark;
+        font-size: rem-calc($potential-rem + 30);
+        font-family: alex-brush, cursive;
+        color: $white;
+      }
+      .event_text_left, .event_text_right{
+        padding: 10px 0px 0px 0px;
+      }
+      .event_text_left{
+        //border-right: 1px solid #111;        
+      }
+      .event_text_right{
+        //border-left: 1px solid #111;
+      }
+      .event_text_left p{
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        text-align: left;
+      }
+      .event_text_right p{
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        text-align: right;
+      }
+    }
+  }
+}

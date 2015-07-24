@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   # Establish the root url of the site
   root 'home#index'
   
@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   
   # Responses URLS
   #get 'responses'   => 'responses#index'
+  
+  # Events URLS
+  get 'events'      => 'event#index'
   
   # About URLS
   get 'about'       => 'about#index'
@@ -27,6 +30,7 @@ Rails.application.routes.draw do
     resources :users
     resources :sessions
     resources :messages
+    resources :events
   end
 
 end
