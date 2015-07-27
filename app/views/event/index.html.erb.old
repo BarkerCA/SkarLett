@@ -1,0 +1,43 @@
+<h1 class="top_h1"><%= page_title %></h1>
+
+<% event_number = 0 %>
+<% @events.each do |event| %>
+  <% event_number += 1 %>
+  <% if event_number.odd? %>
+    <div class="row event_left">
+      <div class="large-1 small-12 columns">
+        &nbsp;
+      </div>
+      <div class="large-2 small-4 columns event_date">
+        <p><%= event.date.strftime("%d") %></p>
+      </div>
+      <div class="large-5 small-8 columns event_text_left">
+        <p class="event_title"><%= event.title %></p>
+        <p class="event_address"><%= event.address %></p>
+        <p class="event_date_text"><%= event.date.strftime("%A, %B %e, %Y") %></p>
+        <p class="event_time"><%= event.time.strftime("%l:%M%p") %></p>
+      </div>
+      <div class="large-4 small-12 columns">
+        &nbsp;
+      </div>
+    </div>
+  <% else %>
+    <div class="row event_right event_even">
+      <div class="large-4 small-12 columns">
+        &nbsp;
+      </div>
+      <div class="large-5 small-8 columns event_text_right">
+        <p class="event_title"><%= event.title %></p>
+        <p class="event_address"><%= event.address %></p>
+        <p class="event_date_text"><%= event.date.strftime("%A, %B %e, %Y") %></p>
+        <p class="event_time"><%= event.time.strftime("%l:%M%p") %></p>
+      </div>
+      <div class="large-2 small-4 columns event_date">
+        <p><%= event.date.strftime("%d") %></p>
+      </div>
+      <div class="large-1 small-12 columns">
+        &nbsp;
+      </div>
+    </div>
+  <% end %>
+<% end %>
