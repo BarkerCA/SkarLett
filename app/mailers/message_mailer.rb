@@ -1,5 +1,5 @@
 class MessageMailer < ApplicationMailer
-  name = "Skar&#x2764;Lett"
+  name = "SkarLett"
   email = "contact@skar-lett.com"
   default from: %("#{name}" <#{email}>)
   
@@ -19,7 +19,7 @@ class MessageMailer < ApplicationMailer
     # :name, :email, :subject, :memo
     # 
     @user = contact
-    mail(to: @user.email, subject: "Thank You For Contacting Skar&#x2764;Lett")
+    mail(to: @user.email, subject: "Thank You For Contacting SkarLett")
   end
   
 end
