@@ -13,7 +13,7 @@
       </thead>
       <tbody>
         <% @events.each do |event| %>
-          <% if event.date > Date.today %>
+          <% if event.date < Date.today %>
           <tr>
             <td><%= event.date %></td>
             <td><%= event.title %></td>
@@ -24,6 +24,6 @@
         <% end %>
       </tbody>
     </table>
-    <p style="text-align: right;"><a class="button" href="/events/past">View Past Events</a></p>
+    <p style="text-align: right;"><a class="button" href="/events">View Upcoming Events</a></p>
   </div>
 </div>

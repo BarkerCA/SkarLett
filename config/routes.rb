@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   #get 'responses'   => 'responses#index'
   
   # Events URLS
-  get 'events'      => 'event#index'
+  get 'events'            => 'event#index'
+  get 'events/past'       => 'event#past'
   
   # About URLS
   get 'about'       => 'about#index'
