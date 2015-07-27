@@ -42,6 +42,15 @@ $potential-rem: 15;
         margin: 0px 0px 0px 0px;
         text-align: right;
       }
+      #event_switcher{
+        margin-top: 5px;
+        padding-top: 5px;
+        border-top: 1px solid $graySilver;
+        
+        p{
+          text-align: center;
+        }
+      }
     }
   }
 }
@@ -73,6 +82,10 @@ $potential-rem: 15;
       }
       .event_text_left, .event_text_right{
         padding: 10px 0px 0px 0px;
+      }
+      #event_switcher{
+        margin-top: 25px;
+        padding-top: 25px;
       }
     }
   }
