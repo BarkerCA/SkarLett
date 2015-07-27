@@ -2,5 +2,13 @@
 <div class="row">
   <div class="small-12 large-12 columns">
     <%=raw @msg %>
+    <% if @data %>
+    <script type="text/javascript">
+      function rdir(){
+        window.location = "http://www.skar-lett.com/";
+      }
+      window.setTimeout(rdir, 5000)
+    </script>
+    <% end %>
   </div>
 </div>

@@ -1,5 +1,5 @@
 class MessageMailer < ApplicationMailer
-  name = "SkarLett"
+  name = "Skar&#x2764;Lett"
   email = "contact@skar-lett.com"
   default from: %("#{name}" <#{email}>)
   
@@ -10,7 +10,7 @@ class MessageMailer < ApplicationMailer
     # 
     @user = contact
     #mail(to: 'amy.campbell@skar-lett.com', cc: 'cassie.barker@skar-lett.com', bcc: 'chris.barker@skar-lett.com', subject: @user.subject.titleize)
-    mail(to: 'chris.barker@skar-lett.com', to: 'chris@barker-bunch.us', subject: @user.subject.titleize)
+    mail(to: 'amy.campbell@skar-lett.com', cc: 'cassie.barker@skar-lett.com', bcc: 'chris@barker-bunch.us', subject: @user.subject.titleize)
   end
   
   def thankyou_email(contact)
@@ -19,7 +19,7 @@ class MessageMailer < ApplicationMailer
     # :name, :email, :subject, :memo
     # 
     @user = contact
-    mail(to: @user.email, subject: "Thank You For Contacting SkarLett")
+    mail(to: @user.email, subject: "Thank You For Contacting Skar&#x2764;Lett")
   end
   
 end
