@@ -1,0 +1,11 @@
+<%= render "layouts/parts/app/head" %>
+<%= render "layouts/parts/app/offcanvas_open" %>
+<%= render "layouts/parts/app/leftside_nav" %>
+<% if current_user %>
+<%= render "layouts/admin/parts/rightside_nav" %>
+<% end %>
+<%= render "layouts/parts/app/content" %>
+<%= render "layouts/parts/app/offcanvas_close" %>
+<%= render "layouts/parts/app/footerappscripts" %>
+<%= render "layouts/admin/parts/footerscripts" %>
+<%= render "layouts/parts/app/foot" %>

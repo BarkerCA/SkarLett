@@ -1,0 +1,78 @@
+<h1 class="top_h1"><%= page_title %></h1>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <%= form_for @event, url: {action: "update"} do |f| %>
+        <% if @event.errors.any? %>
+        <div class="error_messages">
+          <h3>Please correct the errors below.</h3>
+          <ul>
+            <% for message in @event.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <% if @msg %>
+      <div class="error_messages">
+        <h3>Please correct the errors below.</h3>
+        <ul>
+          <li><%= @msg %></li>
+        </ul>
+      </div>
+      <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <div class="row collapse prefix-radius">
+      <div class="small-3 columns">
+        <span class="prefix">Event Title</span>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :title %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <div class="row collapse prefix-radius">
+      <div class="small-3 columns">
+        <span class="prefix">Event Date</span>
+      </div>
+      <div class="small-9 columns">
+        <%= f.date_select :date %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <div class="row collapse prefix-radius">
+      <div class="small-3 columns">
+        <span class="prefix">Event Time</span>
+      </div>
+      <div class="small-9 columns">
+        <%= f.time_select :time %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <div class="row collapse prefix-radius">
+      <div class="small-3 columns">
+        <span class="prefix">Event Address</span>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :address %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <p><%= f.submit :value=>"Edit Event", :class=>"button" %> <input type="button" value="Cancel" class="button" onclick="window.location='/admin/events';" /></p>
+  </div>
+</div>
+<% end %>

@@ -6,7 +6,7 @@ class Admin::EventsController < ApplicationController
   # GET /events.json
   def index
     @page = {:title => 'Events', :head_title => 'Events'}
-    @events = Event.all
+    @events = Event.all.order('date DESC')
   end
 
   # GET /events/1
@@ -32,7 +32,7 @@ class Admin::EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to admin_events_path, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class Admin::EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to admin_events_path, notice: 'Event was successfully updated.' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class Admin::EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to admin_events_url, notice: 'Event was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -74,5 +74,9 @@ class Admin::EventsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:title, :date, :time, :address)
+    end
+    
+    def require_authorization
+      redirect_to admin_log_in_path, :notice => "You must be logged in for access." unless session[:user_id]
     end
 end

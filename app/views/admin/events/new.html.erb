@@ -2,7 +2,7 @@
 <div class="row">
   <div class="small-12 large-12 columns">
     <%= form_for @event, url: {action: "create"} do |f| %>
-      <% if @event.errors.any? %>
+        <% if @event.errors.any? %>
         <div class="error_messages">
           <h3>Please correct the errors below.</h3>
           <ul>
@@ -26,10 +26,10 @@
   <div class="small-12 large-12 columns">
     <div class="row collapse prefix-radius">
       <div class="small-3 columns">
-        <span class="prefix">Name</span>
+        <span class="prefix">Event Title</span>
       </div>
       <div class="small-9 columns">
-
+        <%= f.text_field :title %>
       </div>
     </div>
   </div>
@@ -38,10 +38,10 @@
   <div class="small-12 large-12 columns">
     <div class="row collapse prefix-radius">
       <div class="small-3 columns">
-        <span class="prefix">Email</span>
+        <span class="prefix">Event Date</span>
       </div>
       <div class="small-9 columns">
-
+        <%= f.date_select :date %>
       </div>
     </div>
   </div>
@@ -50,31 +50,29 @@
   <div class="small-12 large-12 columns">
     <div class="row collapse prefix-radius">
       <div class="small-3 columns">
-        <span class="prefix">Subject</span>
+        <span class="prefix">Event Time</span>
       </div>
       <div class="small-9 columns">
-
+        <%= f.time_select :time %>
       </div>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="small-12 large-12 columns">
-
+    <div class="row collapse prefix-radius">
+      <div class="small-3 columns">
+        <span class="prefix">Event Address</span>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :address %>
+      </div>
+    </div>
   </div>
 </div>
 <div class="row">
   <div class="small-12 large-12 columns">
-    <label>What is the color of the word <span class="sk-red_dark">SkarLett</span> at the top of the screen?
-      <span data-tooltip aria-haspopup="true" class="has-tip" title="We use this question to try to make sure the contact form is being submitted by a person.">Why do we ask this?</span>
-      <input name="challenge" type="text">
-    </label>
+    <p><%= f.submit :value=>"Add Event", :class=>"button" %> <input type="button" value="Cancel" class="button" onclick="window.location='/admin/events';" /></p>
   </div>
 </div>
-<div class="row">
-  <div class="small-12 large-12 columns">
-    <p><%= f.submit :value=>"Contact Us", :class=>"button" %></p>
-  </div>
-</div>
-
 <% end %>
