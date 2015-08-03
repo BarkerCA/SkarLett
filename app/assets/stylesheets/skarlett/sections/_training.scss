@@ -1,0 +1,49 @@
+//
+// Font Calculations
+//
+$potential-rem: 15;
+
+//
+// Small screens
+//
+/* Define mobile styles */
+@media only screen {
+  body.training{    
+    .main-section{
+      .holy-spirit{
+        // Video Player Colors
+        .vjs-default-skin { 
+          color: $sk-red_dark; 
+          margin-bottom: 15px;
+        }
+        .vjs-default-skin .vjs-play-progress,
+        .vjs-default-skin .vjs-volume-level { background-color: $white; }
+        .vjs-default-skin .vjs-control-bar,
+        .vjs-default-skin .vjs-big-play-button { background: rgba($sk-teal_dark ,0.2333333333333333); }
+        .vjs-default-skin .vjs-slider { background: rgba(255,255,255,0.2333333333333333); }
+      }
+    }
+  }
+}
+//
+// Medium screens 
+//
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  body.training{    
+    .main-section{
+      
+    }
+  }
+}
+//
+// Large screens
+//
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  body.training{    
+    .main-section{
+      
+    }
+  }
+}
