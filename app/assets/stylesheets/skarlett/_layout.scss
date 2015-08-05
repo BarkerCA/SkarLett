@@ -17,6 +17,7 @@ $toph1-rem: 40;
       cursor: pointer;
     }
     #logo{
+      display: none;
       text-align: center;
       margin-top: 5px;
       font-family: alex-brush, cursive;
@@ -30,6 +31,10 @@ $toph1-rem: 40;
         margin-left: 5px;
         margin-right: 5px;
       }
+    }
+    #logo_img{
+      margin-top: 25px;
+      height: 50px;
     }
     .main-section{
       background-color: rgba(255,255,255,1.0);
@@ -143,7 +148,10 @@ $toph1-rem: 40;
         margin-right: 10px;
       }
     }
-    
+    #logo_img{
+      margin-top: 10px;
+      height: 75px;  
+    }
     .main-section{
       h1.top_h1{
         margin: 0px 0px 50px 0px;
