@@ -2,7 +2,7 @@
 
 <% event_number = 0 %>
 <% @events.each do |event| %>
-  <% if event.date > Date.today %>
+  <% if event.date >= Date.today %>
   <% event_number += 1 %>
     <% if event_number.odd? %>
       <div class="row event_left">
