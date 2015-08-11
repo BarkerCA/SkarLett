@@ -30,8 +30,10 @@ Rails.application.routes.draw do
     get "signup"  => "users#new",         :as => "sign_up"
     
     # Training URLS
-    get "training"              => "training#index"
-    get "training/holy_spirit"  => "training#holy_spirit"
+    get "training"                => "training#index"
+    get "training/holy_spirit"    => "training#holy_spirit"
+    get "training/under_cover"    => "training#under_cover"
+    get "training/bait_of_satan"  => "training#bait_of_satan"
 
     resources :users
     resources :sessions

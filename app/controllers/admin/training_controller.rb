@@ -9,6 +9,14 @@ class Admin::TrainingController < ApplicationController
     @page = {:title => 'Holy Spirit', :head_title => 'Holy Spirit'}
   end
 
+  def under_cover
+    @page = {:title => 'Under Cover', :head_title => 'Under Cover'}
+  end
+  
+  def bait_of_satan
+    @page = {:title => 'The Bait of Satan', :head_title => 'The Bait of Satan'}
+  end
+
   private
     def require_authorization
       redirect_to admin_log_in_path, :notice => "You must be logged in for access." unless session[:user_id]
