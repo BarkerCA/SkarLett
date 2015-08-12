@@ -18,6 +18,12 @@ $potential-rem: 15;
       img:hover{
         @include photo_style_hover($shadow-color: $sk-red);
       }
+      #img2, #img4, #img5, #img7{
+        margin-bottom: 10px;
+      }
+      #img3,#img6{
+        display:none;
+      }
       #p1{
         margin-top: 10px;
         span{
@@ -27,6 +33,17 @@ $potential-rem: 15;
       }
       #p1, #p2, #p3, #p4, #p5{
         text-align: justify;
+      }
+      // Standout Areas
+      .callout{
+        border-top: 1px solid $grayTimberwolf;
+        border-bottom: 1px solid $grayTimberwolf;
+        margin: 25px 0px 45px 0px;
+        padding: 10px 0px 10px 0px;
+        text-align: center; 
+        color: $sk-red_dark; 
+        font-style: italic;
+        font-size: rem-calc($potential-rem);
       }
     }
   }
@@ -38,7 +55,12 @@ $potential-rem: 15;
 @media only screen and (min-width: 40.063em){
   body.missions{    
     .main-section{
-      
+      // Standout Areas
+      .callout{
+        margin: 25px 0px 35px 0px;
+        padding: 10px 0px 10px 0px;
+        font-size: rem-calc($potential-rem + 10);
+      }
     }
   }
 }
@@ -49,6 +71,19 @@ $potential-rem: 15;
 @media only screen and (min-width: 64.063em){
   body.missions{    
     .main-section{
+      // Standout Areas
+      .callout{
+        font-size: rem-calc($potential-rem + 17);
+      }
+      #img2,#img5{
+        display:none;
+      }
+      #img3,#img6{
+        display:block;
+      }
+      #img7{
+        margin-top: 15px;
+      }
       #p2{
         margin-top: 15px;
       }
@@ -60,9 +95,6 @@ $potential-rem: 15;
       }
       #p5{
         margin-top: 25px;
-      }
-      #rainbow{
-        margin-bottom: 25px;
       }
     }
   }
