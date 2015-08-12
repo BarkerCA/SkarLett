@@ -1,0 +1,69 @@
+//
+// Font Calculations
+//
+$potential-rem: 15;
+
+//
+// Small screens
+//
+/* Define mobile styles */
+@media only screen {
+  body.missions{    
+    .main-section{
+      // Page Images
+      img{
+        @include photo_style;
+        //margin: 19px;       
+      }
+      img:hover{
+        @include photo_style_hover($shadow-color: $sk-red);
+      }
+      #p1{
+        margin-top: 10px;
+        span{
+          text-decoration: underline;
+          font-style: italic;
+        }
+      }
+      #p1, #p2, #p3, #p4, #p5{
+        text-align: justify;
+      }
+    }
+  }
+}
+//
+// Medium screens 
+//
+/* min-width 641px, medium screens */ 
+@media only screen and (min-width: 40.063em){
+  body.missions{    
+    .main-section{
+      
+    }
+  }
+}
+//
+// Large screens
+//
+/* min-width 1025px, large screens */ 
+@media only screen and (min-width: 64.063em){
+  body.missions{    
+    .main-section{
+      #p2{
+        margin-top: 15px;
+      }
+      #p3{
+        margin-top: 30px;
+      }
+      #p4{
+        margin-top: 75px;
+      }
+      #p5{
+        margin-top: 25px;
+      }
+      #rainbow{
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

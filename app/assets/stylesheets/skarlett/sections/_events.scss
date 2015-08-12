@@ -10,6 +10,14 @@ $potential-rem: 15;
 @media only screen {
   body.event{    
     .main-section{
+      // Page Images
+      img{
+        @include photo_style;
+        //margin: 19px;       
+      }
+      img:hover{
+        @include photo_style_hover($shadow-color: $sk-red);
+      }
       .event_even{
         background-color: $whiteSmoke;
       }

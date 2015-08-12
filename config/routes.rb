@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   # Events URLS
   get 'events'            => 'event#index'
   get 'events/past'       => 'event#past'
-  get 'events/honduras'   => 'event#honduras'
+
+  # Missions URLS
+  get 'missions'          => 'missions#index'
   
   # About URLS
   get 'about'       => 'about#index'
