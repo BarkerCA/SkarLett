@@ -51,7 +51,36 @@ $heading-rem: 40;
           } 
         }
       }
-      
+
+      #missions{
+        background-color: $sk-red_dark;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        h1{
+          font-size: rem-calc($heading-rem);
+          color: $white;
+          text-align: center;
+        }
+        .button{
+          background-color: transparent;
+          border: 2px solid $white;
+          color: $white;
+          font-weight: bold;
+          a{
+            color: $white;
+          }
+        }
+        .button:hover{
+          background-color: $white;
+          border: 2px solid $sk-red;
+          color: $sk-red;
+          font-weight: bold;
+          a{
+            color: $primary-color;
+          }
+        }
+      }
+
       #about{
         background-color: $sk-teal;
         padding-top: 100px;
@@ -157,6 +186,17 @@ $heading-rem: 40;
             margin-top: 25px;
             margin-bottom: 45px;
           }
+        }
+      }
+      
+      #missions{
+        padding-top: 200px;
+        padding-bottom: 200px;
+        h1{
+          font-size: rem-calc($heading-rem + 20);
+        }
+        p{
+          margin-top: 50px;
         }
       }
       

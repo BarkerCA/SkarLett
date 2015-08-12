@@ -2,12 +2,13 @@ Rails.application.routes.draw do
 
   # Establish the root url of the site
   root 'home#index'
+  #root 'home#special'
   
   # Contact URLS
-  get 'contact'                 => 'contact#index'
-  get 'contact/finished'        => 'contact#finished'
-  get 'contact/finished/:data'  => 'contact#finished'
-  post 'contact'                => 'contact#create'
+  get   'contact'                 => 'contact#index'
+  get   'contact/finished'        => 'contact#finished'
+  get   'contact/finished/:data'  => 'contact#finished'
+  post  'contact'                 => 'contact#create'
   
   # Responses URLS
   #get 'responses'   => 'responses#index'
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
   get 'missions'          => 'missions#index'
   
   # About URLS
-  get 'about'       => 'about#index'
+  get 'about'             => 'about#index'
 
   # Admin URLS
   get "admin" => "admin/home#index"
