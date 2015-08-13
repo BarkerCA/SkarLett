@@ -6,7 +6,9 @@
           <li><a href="/admin/training">Training</a></li>
           <li><a href="/admin/events">Events</a></li>
           <li><a href="/admin/messages">Messages</a></li>
+          <% if current_user.email == "chris@skar-lett.com" %>
           <li><a href="/admin/users">Users</a></li>
+          <% end %>
           <li><a href="/admin/logout">Logout</a></li>
         </ul>
       </aside>
