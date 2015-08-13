@@ -37,6 +37,7 @@ Rails.application.routes.draw do
     get "training/holy_spirit"    => "training#holy_spirit"
     get "training/under_cover"    => "training#under_cover"
     get "training/bait_of_satan"  => "training#bait_of_satan"
+    get "training/my_best_friend" => "training#my_best_friend"
 
     resources :users
     resources :sessions
