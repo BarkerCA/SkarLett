@@ -41,6 +41,17 @@ module ApplicationHelper
     end
   end
   
+  # Assets Link
+  def assets_link(type)
+    if type == "bb"
+      "http://assets.barker-bunch.us"
+    elsif type == "skarlett"
+      "http://assets.skar-lett.com"
+    elsif type == "refresh"
+      "http://assets.refresh-ministries.org"
+    end
+  end
+  
   # Check For Mobile
   def mobile_device?
     if session[:mobile_param]
