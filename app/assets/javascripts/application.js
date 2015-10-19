@@ -19,3 +19,4 @@
 //= require foundation
 //= require skarlett
 //= require reftagger
+$(document).foundation();
